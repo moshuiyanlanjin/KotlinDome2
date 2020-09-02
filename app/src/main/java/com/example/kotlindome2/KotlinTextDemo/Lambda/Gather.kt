@@ -29,4 +29,12 @@ fun main(){
     for (str in mutableSetOf){
         println(str)
     }
+
+    //map集合具体用法和listof一样，在这里添加了to关键字 用来关联
+    val mapOf = mapOf("儒" to "四书五经", "道" to "道德经")
+    for((jiao,jing) in mapOf){
+        println("教派：${jiao},经典著作：${jing}")
+    }
+
+
 }
