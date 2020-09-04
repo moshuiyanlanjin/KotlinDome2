@@ -6,7 +6,7 @@ import com.example.kotlindome2.KotlinTextDemo.JieKou.Study
 fun main(){
 
 }
-//let的具体使用
+//let的具体使用,个人理解是开辟一个方法，将参数以上下文的方式传入
 fun doStudy(study: Study?){
 
     //原始写法：
