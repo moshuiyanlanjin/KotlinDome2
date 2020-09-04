@@ -1,11 +1,14 @@
 package com.example.kotlindome2
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlindome2.Activity.ActesActivity
 import com.example.kotlindome2.Adapter.MainAdapter
+import com.example.kotlindome2.Utils.StartActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private fun initData() {
 
         mainList.add("Activity")
+        mainList.add("fragment")
 
     }
 
@@ -43,12 +47,15 @@ class MainActivity : AppCompatActivity() {
 
         when(position){
             0 -> {
-                intent = Intent(this, ActesActivity::class.java)
-                startActivity(intent)
+                Log.d("d","点击了")
+               StartActivity.StartActesActivity(this,"长恨歌","将进酒")
             }
-
+            1 -> {
+                StartActivity.StartFragActivity(this)
+            }
         }
     }
+
 
 
 }

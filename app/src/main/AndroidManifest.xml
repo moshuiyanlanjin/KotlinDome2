@@ -18,6 +18,7 @@
         </activity>
 
         <activity android:name=".Activity.ActesActivity"/>
+        <activity android:name=".Activity.FragActivity"/>
     </application>
 
 </manifest>
