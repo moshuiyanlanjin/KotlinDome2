@@ -11,7 +11,7 @@ class Studen(var sno:String,var grade:Int,name:String,age:Int):Person(name,age) 
     }
 
     /**
-     * constructor：次级函数关键字，kotlin规定次级函数必须调用主构造函数（也可间接调用）,一个类只有一个主钩造函数，但可以有多个次级函数
+     * constructor：次级函数关键字，kotlin规定在有主钩造函数时次级函数必须调用主构造函数（也可间接调用）,一个类只有一个主钩造函数，但可以有多个次级函数
      */
     constructor(name: String,age: Int):this("30",6,name,age){
         println("当前次级函数是：${name},${age},${sno},${grade}")
@@ -22,9 +22,19 @@ class Studen(var sno:String,var grade:Int,name:String,age:Int):Person(name,age) 
     }
 }
 
+/**
+ * kotlin规定一个类里面可以只有次级函数，因为没有主钩造函数，所以可以不要括号
+ */
+class Studens:Person{
+    constructor(name: String,age: Int) : super(name,age){
+        println("当前最低次级函数是：${name},${age}")
+    }
+}
+
 
 fun main(){
     val s = Studen("20",2,"李四",21)
     Studen("王五",20)
     Studen()
+    Studens("老师",22)
 }
