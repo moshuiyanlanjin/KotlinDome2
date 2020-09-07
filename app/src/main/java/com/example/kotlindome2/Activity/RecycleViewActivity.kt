@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlindome2.Adapter.RecyclerViewAdapter
 import com.example.kotlindome2.R
+import com.example.kotlindome2.Utils.StartActivity
 import kotlinx.android.synthetic.main.activity_recycle.*
 
 class RecycleViewActivity : BaseActivity() {
@@ -35,7 +36,7 @@ class RecycleViewActivity : BaseActivity() {
 
         when(position){
             0 -> {
-
+                    StartActivity.StartWaterfallActivity(this)
             }
         }
     }
