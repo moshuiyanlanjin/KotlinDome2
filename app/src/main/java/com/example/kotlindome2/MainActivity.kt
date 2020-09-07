@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private fun initData() {
 
         mainList.add("Activity")
+        mainList.add("RecycleView")
         mainList.add("fragment")
 
     }
@@ -51,6 +52,9 @@ class MainActivity : AppCompatActivity() {
                StartActivity.StartActesActivity(this,"长恨歌","将进酒")
             }
             1 -> {
+                StartActivity.StratRecycleViewActivity(this)
+            }
+            2 -> {
                 StartActivity.StartFragActivity(this)
             }
         }

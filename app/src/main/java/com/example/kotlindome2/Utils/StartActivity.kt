@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import com.example.kotlindome2.Activity.ActesActivity
 import com.example.kotlindome2.Activity.FragActivity
+import com.example.kotlindome2.Activity.RecycleViewActivity
+import com.example.kotlindome2.Activity.WaterfallActivity
 
 /**
  * companion object：所有companion object中的方法都可以类似静态变量调用
@@ -21,8 +23,23 @@ class StartActivity {
             context.startActivity(intent)
         }
 
+        /**
+         * 跳转RecycleViewActivity
+         */
+        fun StratRecycleViewActivity(context: Context){
+            val intent = Intent(context, RecycleViewActivity::class.java)
+            context.startActivity(intent)
+        }
+        /**
+         * 跳转FragActivity中
+         */
         fun StartFragActivity(context: Context){
             val intent = Intent(context, FragActivity::class.java)
+            context.startActivity(intent)
+        }
+
+        fun StartWaterfallActivity(context: Context){
+            val intent = Intent(context, WaterfallActivity::class.java)
             context.startActivity(intent)
         }
     }

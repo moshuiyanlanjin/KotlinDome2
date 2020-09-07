@@ -20,6 +20,7 @@
 
         <activity android:name=".Activity.ActesActivity"/>
         <activity android:name=".Activity.FragActivity"/>
+        <activity android:name=".Activity.RecycleViewActivity"/>
 
 
 
