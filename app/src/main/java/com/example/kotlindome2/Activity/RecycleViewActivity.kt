@@ -38,12 +38,15 @@ class RecycleViewActivity : BaseActivity() {
             0 -> {
                     StartActivity.StartWaterfallActivity(this)
             }
+            1 -> {
+                StartActivity.StartChatRecyActivity(this)
+            }
         }
     }
 
     private fun initData() {
         titleList.add("瀑布流")
-        titleList.add("东成西就")
+        titleList.add("聊天界面")
         titleList.add("战狼")
         titleList.add("我的团长我的团")
 

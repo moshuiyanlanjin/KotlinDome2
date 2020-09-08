@@ -2,10 +2,7 @@ package com.example.kotlindome2.Utils
 
 import android.content.Context
 import android.content.Intent
-import com.example.kotlindome2.Activity.ActesActivity
-import com.example.kotlindome2.Activity.FragActivity
-import com.example.kotlindome2.Activity.RecycleViewActivity
-import com.example.kotlindome2.Activity.WaterfallActivity
+import com.example.kotlindome2.Activity.*
 
 /**
  * companion object：所有companion object中的方法都可以类似静态变量调用
@@ -38,8 +35,19 @@ class StartActivity {
             context.startActivity(intent)
         }
 
+        /**
+         * 跳转到瀑布流的Activity界面
+         */
         fun StartWaterfallActivity(context: Context){
             val intent = Intent(context, WaterfallActivity::class.java)
+            context.startActivity(intent)
+        }
+
+        /**
+         * 跳转聊天界面
+         */
+        fun StartChatRecyActivity(context: Context){
+            val intent = Intent(context, ChatRecyActivity::class.java)
             context.startActivity(intent)
         }
     }
