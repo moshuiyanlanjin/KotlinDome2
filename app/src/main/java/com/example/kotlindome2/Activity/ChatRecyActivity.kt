@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_chat_recy.*
 class ChatRecyActivity : BaseActivity() {
 
     private var msgList = mutableListOf<Msg>()
-    private var adapter: MsgAdapter? = null;
+    private lateinit var adapter: MsgAdapter;
     var type = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

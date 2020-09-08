@@ -13,6 +13,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    //lateinit:延迟加载，告诉kotlin编译器我会在晚些时候对这个变量进行初始化
+    private lateinit var mainAdapter:MainAdapter
     var mainList = mutableListOf<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +35,11 @@ class MainActivity : AppCompatActivity() {
     private fun initView() {
         val linearLayoutManager = LinearLayoutManager(this)
         recy.layoutManager = linearLayoutManager
-        val mainAdapter = MainAdapter(mainList)
-        recy.adapter = mainAdapter
+        //::mainAdapter.isInitialized判断全局变量是否初始化
+        if (!::mainAdapter.isInitialized) {
+            mainAdapter = MainAdapter(mainList)
+            recy.adapter = mainAdapter
+        }
 
         mainAdapter.setItemOnClike(object:MainAdapter.OnClike{
             override fun ItemOnclike(position: Int) {
