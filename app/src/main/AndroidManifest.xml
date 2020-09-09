@@ -22,7 +22,7 @@
         <activity android:name=".Activity.FragActivity"/>
         <activity android:name=".Activity.RecycleViewActivity"/>
         <activity android:name=".Activity.WaterfallActivity"/>
-
+        <activity android:name=".Activity.ChatRecyActivity"/>
 
 
 
