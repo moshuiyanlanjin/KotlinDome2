@@ -23,6 +23,8 @@
         <activity android:name=".Activity.RecycleViewActivity"/>
         <activity android:name=".Activity.WaterfallActivity"/>
         <activity android:name=".Activity.ChatRecyActivity"/>
+        <activity android:name=".Activity.NewsContentActivity"/>
+        <activity android:name=".Activity.NewsTitleActivity"/>
 
 
 

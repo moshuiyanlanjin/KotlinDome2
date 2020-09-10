@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         mainList.add("Activity")
         mainList.add("RecycleView")
         mainList.add("fragment")
+        mainList.add("新闻")
 
     }
 
@@ -61,6 +62,9 @@ class MainActivity : AppCompatActivity() {
             }
             2 -> {
                 StartActivity.StartFragActivity(this)
+            }
+            3 -> {
+                StartActivity.StartNewsTitleActivity(this)
             }
         }
     }

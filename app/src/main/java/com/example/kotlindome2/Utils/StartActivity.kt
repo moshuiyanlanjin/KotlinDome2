@@ -50,5 +50,21 @@ class StartActivity {
             val intent = Intent(context, ChatRecyActivity::class.java)
             context.startActivity(intent)
         }
+
+        /**
+         * 跳转到新闻内容界面
+         */
+        fun StartNewsContentActivity(context: Context,title:String,content:String){
+            val intent = Intent(context,NewsContentActivity::class.java).apply {
+                putExtra("news_title",title)
+                putExtra("news_content",content)
+            }
+            context.startActivity(intent)
+        }
+
+        fun StartNewsTitleActivity(context: Context){
+            val intent = Intent(context,NewsTitleActivity::class.java)
+            context.startActivity(intent)
+        }
     }
 }
