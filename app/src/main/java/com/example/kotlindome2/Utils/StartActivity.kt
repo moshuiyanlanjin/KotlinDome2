@@ -1,5 +1,6 @@
 package com.example.kotlindome2.Utils
 
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import com.example.kotlindome2.Activity.*
@@ -62,8 +63,19 @@ class StartActivity {
             context.startActivity(intent)
         }
 
+        /**
+         * 跳转到新闻activity
+         */
         fun StartNewsTitleActivity(context: Context){
             val intent = Intent(context,NewsTitleActivity::class.java)
+            context.startActivity(intent)
+        }
+
+        /**
+         * 跳转到广播activity
+         */
+        fun StartBroadcastActivity(context: Context){
+            val intent = Intent(context, BroadcastActivity::class.java)
             context.startActivity(intent)
         }
     }

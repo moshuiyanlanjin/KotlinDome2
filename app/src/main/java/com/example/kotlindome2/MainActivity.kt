@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         mainList.add("RecycleView")
         mainList.add("fragment")
         mainList.add("新闻")
+        mainList.add("广播")
 
     }
 
@@ -65,6 +66,9 @@ class MainActivity : AppCompatActivity() {
             }
             3 -> {
                 StartActivity.StartNewsTitleActivity(this)
+            }
+            4 -> {
+                StartActivity.StartBroadcastActivity(this)
             }
         }
     }
