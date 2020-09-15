@@ -30,7 +30,7 @@ open class BaseActivity : AppCompatActivity(){
 
     inner class ForceOfflineReceive : BroadcastReceiver() {
         override fun onReceive(p0: Context?, p1: Intent?) {
-
+            Log.d("广播收到了","关闭")
             p0?.let {
                 AlertDialog.Builder(it).apply {
                     setTitle("退出登录")
@@ -41,6 +41,7 @@ open class BaseActivity : AppCompatActivity(){
                         val i = Intent(p0,MainActivity::class.java)
                         p0.startActivity(i)
                     }
+                    show()
                 }
             }
         }

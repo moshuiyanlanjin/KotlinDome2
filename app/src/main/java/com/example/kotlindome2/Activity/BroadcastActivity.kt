@@ -37,6 +37,12 @@ class BroadcastActivity : BaseActivity(){
             //发送有序广播
             sendOrderedBroadcast(intent,null)
         }
+
+        closebt.setOnClickListener {
+            Log.d("我点击了：","closebt")
+            val intent = Intent("com.example.CORRE")
+            sendBroadcast(intent)
+        }
     }
 
     inner class TimeChangReceiver : BroadcastReceiver() {

@@ -9,5 +9,11 @@
         android:text="发送广播"
         android:id="@+id/sendbt"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送关闭广播"
+        android:id="@+id/closebt"
+        />
 
 </LinearLayout>

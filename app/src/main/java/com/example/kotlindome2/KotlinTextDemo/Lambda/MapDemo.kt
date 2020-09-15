@@ -1,7 +1,7 @@
 package com.example.kotlindome2.KotlinTextDemo.Lambda
 
 /**
- * max将集合中的每个元素都映射为其他元素
+ * map将集合中的每个元素都映射为其他元素
  */
 fun main(){
     val mutableListOf = mutableListOf("a", "b", "c")
