@@ -3,10 +3,13 @@ package com.example.kotlindome2.KotlinTextDemo.Gaoji
 import java.lang.StringBuilder
 
 /**
- * 高级函数：
+ * 高级函数：可直接传入函数，完整规则是在前方加入classname,仿apply写法
+ * 内联函数：在fun前方添加inline，主要作用是抵消Lambda表达式带来的运行开销
+ * noinline:强调此函数无需内联
+ * crossinline:确定此内联函数一定不会使用return
  */
 
-fun num1AndNum2(num1:Int,num2:Int,operatin:(Int,Int) -> Int):Int{
+inline fun num1AndNum2(num1:Int,num2:Int,operatin:(Int,Int) -> Int):Int{
     val result = operatin(num1,num2)
     return result
 }
