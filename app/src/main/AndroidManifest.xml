@@ -53,6 +53,7 @@
         <activity android:name=".Activity.NewsContentActivity" />
         <activity android:name=".Activity.NewsTitleActivity" />
         <activity android:name=".Activity.BroadcastActivity" />
+        <activity android:name=".Activity.FileStoreActivity" />
     </application>
 
 </manifest>

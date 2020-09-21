@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         mainList.add("fragment")
         mainList.add("新闻")
         mainList.add("广播")
+        mainList.add("文件储存")
 
     }
 
@@ -69,6 +70,9 @@ class MainActivity : AppCompatActivity() {
             }
             4 -> {
                 StartActivity.StartBroadcastActivity(this)
+            }
+            5 -> {
+                StartActivity.StartFileStoreActivity(this)
             }
         }
     }

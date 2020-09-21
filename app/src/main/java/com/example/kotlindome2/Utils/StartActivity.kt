@@ -78,5 +78,10 @@ class StartActivity {
             val intent = Intent(context, BroadcastActivity::class.java)
             context.startActivity(intent)
         }
+
+        fun StartFileStoreActivity(context: Context){
+            val intent = Intent(context, FileStoreActivity::class.java)
+            context.startActivity(intent)
+        }
     }
 }
