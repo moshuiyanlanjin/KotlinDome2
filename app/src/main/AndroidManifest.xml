@@ -54,6 +54,7 @@
         <activity android:name=".Activity.NewsTitleActivity" />
         <activity android:name=".Activity.BroadcastActivity" />
         <activity android:name=".Activity.FileStoreActivity" />
+        <activity android:name=".Activity.SQLiteDataActivity"/>
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
+import java.lang.Exception
 import java.lang.StringBuilder
 
 class FileStoreActivity : BaseActivity() {
@@ -15,7 +16,10 @@ class FileStoreActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filestore)
-        edit.setText(load())
+        if(load().isNotEmpty()){
+            edit.setText(load())
+        }
+
     }
 
     override fun onDestroy() {
@@ -33,12 +37,16 @@ class FileStoreActivity : BaseActivity() {
 
     private fun load():String{
         val context = StringBuilder()
-        val input = openFileInput("乌鸡")
-        val reader = BufferedReader(InputStreamReader(input))
-        reader.use {
-            reader.forEachLine {
-                context.append(it)
+        try {
+            val input = openFileInput("乌鸡")
+            val reader = BufferedReader(InputStreamReader(input))
+            reader.use {
+                reader.forEachLine {
+                    context.append(it)
+                }
             }
+        }catch (e:Exception){
+            e.printStackTrace()
         }
         return context.toString()
     }

@@ -79,8 +79,16 @@ class StartActivity {
             context.startActivity(intent)
         }
 
+        /**
+         * 文件储存
+         */
         fun StartFileStoreActivity(context: Context){
             val intent = Intent(context, FileStoreActivity::class.java)
+            context.startActivity(intent)
+        }
+
+        fun StartSQLiteDataActivity(context: Context){
+            val intent = Intent(context, SQLiteDataActivity::class.java)
             context.startActivity(intent)
         }
     }

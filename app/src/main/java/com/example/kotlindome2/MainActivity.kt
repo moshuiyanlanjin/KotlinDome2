@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         mainList.add("新闻")
         mainList.add("广播")
         mainList.add("文件储存")
+        mainList.add("数据库")
 
     }
 
@@ -73,6 +74,9 @@ class MainActivity : AppCompatActivity() {
             }
             5 -> {
                 StartActivity.StartFileStoreActivity(this)
+            }
+            6 -> {
+                StartActivity.StartSQLiteDataActivity(this)
             }
         }
     }
